@@ -13,7 +13,6 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="SQLite Database.lvclass" Type="LVClass" URL="../Log Sinks/SQLite Database/SQLite Database.lvclass"/>
 		<Item Name="TSC Event Logger (SQL).lvlib" Type="Library" URL="../TSC Event Logger (SQL).lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">

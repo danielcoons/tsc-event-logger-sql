@@ -11,6 +11,8 @@
 		</Item>
 	</Item>
 	<Item Name="Log Sinks" Type="Folder">
-		<Item Name="SQLite Database" Type="Folder"/>
+		<Item Name="SQLite Database" Type="Folder">
+			<Item Name="SQLite Database.lvclass" Type="LVClass" URL="../Log Sinks/SQLite Database/SQLite Database.lvclass"/>
+		</Item>
 	</Item>
 </Library>
