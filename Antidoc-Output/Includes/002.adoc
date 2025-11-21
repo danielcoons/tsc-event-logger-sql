@@ -1,0 +1,59 @@
+== Classes overview
+
+This project contains 2 classes and 0 interface.
+
+.Classes list
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Classes |Interfaces
+
+|<<DBLayout.lvclass>>
+|
+
+|<<SQLite Database.lvclass>>
+|
+|===
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "TSC Event Logger (SQL).lvlib:DBLayout" {
+{method} +Format Entry()
+
+}
+"TSC Event Logger.lvlib:Layout" <|-- "TSC Event Logger (SQL).lvlib:DBLayout"
+
+
+class "TSC Event Logger (SQL).lvlib:SQLite Database" {
+{field} -SQLite Connection : LV Class
+{field} -name-format : String
+{field} -file extension : String
+{field} -location : Path
+{field} -Max File Size (MB) : Double Float
+{field} -N Day Buffer : U32
+{field} -SQL Statement : LV Class
+{field} -file path : Path
+{static} {method} -Check File Size()
+{static} {method} -New DB()
+{static} {method} +Construct - File()
+{static} {method} +Construct - Input()
+{static} {method} +Construct()
+{method} #Close()
+{method} #Write()
+
+}
+"TSC Event Logger.lvlib:Log Sinks" <|-- "TSC Event Logger (SQL).lvlib:SQLite Database"
+"TSC Event Logger (SQL).lvlib:SQLite Database" *-- "SQLite.lvlib:Connection"
+"TSC Event Logger (SQL).lvlib:SQLite Database" *-- "SQLite.lvlib:SQL Statement"
+
+
+
+@enduml
+....

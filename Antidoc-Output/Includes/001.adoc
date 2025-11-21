@@ -1,0 +1,20 @@
+== TSC Event Logger (SQL).lvlib
+
+*Responsibility:*
+No description found (add content in lvlib description)
+
+*Version:* 1.0.0.0
+
+.Nested libraries
+[cols="", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Type
+
+|<<DBLayout.lvclass>>
+|LVClass
+
+|<<SQLite Database.lvclass>>
+|LVClass
+|===
+
+This library has no functions set to non private scope.
