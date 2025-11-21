@@ -1,0 +1,4 @@
+== Project description
+
++++The TSC Event Logger extension that implements a SQLite database as an option+++
+

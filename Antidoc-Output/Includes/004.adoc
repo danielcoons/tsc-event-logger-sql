@@ -1,0 +1,144 @@
+== SQLite Database.lvclass
+
+*Responsibility:*
++++A SQLite database sink type.+++
+
++++https://sqlite.org/+++
+
+
+*Version:* 1.0.0.0
+
+[plantuml, format="svg", align="center"]
+....
+@startuml
+set namespaceSeparator :
+skinparam ClassBackgroundColor #FFFFFF
+skinparam ClassBorderColor #555555
+skinparam ClassFontColor #000000
+skinparam ClassHeaderBackgroundColor #808080
+
+skinparam top to bottom direction
+class "TSC Event Logger (SQL).lvlib:SQLite Database" {
+{field} -SQLite Connection : LV Class
+{field} -name-format : String
+{field} -file extension : String
+{field} -location : Path
+{field} -Max File Size (MB) : Double Float
+{field} -N Day Buffer : U32
+{field} -SQL Statement : LV Class
+{field} -file path : Path
+{static} {method} -Check File Size()
+{static} {method} -New DB()
+{static} {method} +Construct - File()
+{static} {method} +Construct - Input()
+{static} {method} +Construct()
+{method} #Close()
+{method} #Write()
+
+}
+"TSC Event Logger.lvlib:Log Sinks" <|-- "TSC Event Logger (SQL).lvlib:SQLite Database"
+"TSC Event Logger (SQL).lvlib:SQLite Database" *-- "SQLite.lvlib:Connection"
+"TSC Event Logger (SQL).lvlib:SQLite Database" *-- "SQLite.lvlib:SQL Statement"
+
+
+
+@enduml
+....
+
+.Functions
+[cols="<.<4d,<.<8a,<.<12d,<.<1a,<.<1a,<.<1a", %autowidth, frame=all, grid=all, stripes=none]
+|===
+|Name |Connector pane |Description |S. |R. |I.
+
+|Check File Size
+|image:TSC_Event_Logger_(SQL).lvlib_SQLite_Database.lvclass_Check_File_Size.vi.png[TSC Event Logger (SQL).lvlib:SQLite Database.lvclass:Check File Size.vi]
+|+++Check to see if the database file output is beyond the maximum size defined.+++
+
++++<b>Code Developed By:</b>+++
++++Technology Service Corporation+++
++++Bloomington, IN 47403+++
++++www.tsc.com/atcs+++
+
++++Developer:+++
++++Daniel Coons+++
+
+|image:scope-private.png[scope-private.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|New DB
+|image:TSC_Event_Logger_(SQL).lvlib_SQLite_Database.lvclass_New_DB.vi.png[TSC Event Logger (SQL).lvlib:SQLite Database.lvclass:New DB.vi]
+|+++Create a SQLite database sink.+++
+
++++<b>Code Developed By:</b>+++
++++Technology Service Corporation+++
++++Bloomington, IN 47403+++
++++www.tsc.com/atcs+++
+
++++Developer:+++
++++Daniel Coons+++
+
+|image:scope-private.png[scope-private.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Close
+|image:TSC_Event_Logger_(SQL).lvlib_SQLite_Database.lvclass_Close.vi.png[TSC Event Logger (SQL).lvlib:SQLite Database.lvclass:Close.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Construct - File
+|image:TSC_Event_Logger_(SQL).lvlib_SQLite_Database.lvclass_Construct___File.vi.png[TSC Event Logger (SQL).lvlib:SQLite Database.lvclass:Construct - File.vi]
+|+++Construct the database sink type from common ini file format.+++
+
++++<b>Code Developed By:</b>+++
++++Technology Service Corporation+++
++++Bloomington, IN 47403+++
++++www.tsc.com/atcs+++
+
++++Developer:+++
++++Daniel Coons+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Construct - Input
+|image:TSC_Event_Logger_(SQL).lvlib_SQLite_Database.lvclass_Construct___Input.vi.png[TSC Event Logger (SQL).lvlib:SQLite Database.lvclass:Construct - Input.vi]
+|+++Construct the SQLite database sink from direct VI input.+++
+
++++<b>Code Developed By:</b>+++
++++Technology Service Corporation+++
++++Bloomington, IN 47403+++
++++www.tsc.com/atcs+++
+
++++Developer:+++
++++Daniel Coons+++
+
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+
+|Read Filepath
+|image:TSC_Event_Logger_(SQL).lvlib_SQLite_Database.lvclass_Read_Filepath.vi.png[TSC Event Logger (SQL).lvlib:SQLite Database.lvclass:Read Filepath.vi]
+|+++Read the filepath to the database sink.+++
+
+|image:empty.png[empty.png]
+|image:reentrancy-preallocated.png[reentrancy-preallocated.png]
+|image:inlined.png[inlined.png]
+
+|Write
+|image:TSC_Event_Logger_(SQL).lvlib_SQLite_Database.lvclass_Write.vi.png[TSC Event Logger (SQL).lvlib:SQLite Database.lvclass:Write.vi]
+|No description found (add content in vi description)
+|image:scope-protected.png[scope-protected.png]
+|image:empty.png[empty.png]
+|image:empty.png[empty.png]
+|===
+
+**S**cope: image:scope-protected.png[] -> Protected | image:scope-community.png[] -> Community | image:scope-private.png[] -> Private
+
+**R**eentrancy: image:reentrancy-preallocated.png[] -> Preallocated reentrancy | image:reentrancy-shared.png[] -> Shared reentrancy
+
+**I**nlining: image:inlined.png[] -> Inlined
