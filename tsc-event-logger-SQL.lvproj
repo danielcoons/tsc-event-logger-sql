@@ -13,6 +13,12 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="_Unit Test" Type="Folder">
+			<Item Name="_Unit Test (TSC Event Logger - SQL).lvproj" Type="Document" URL="../_Unit Test/_Unit Test (TSC Event Logger - SQL).lvproj"/>
+		</Item>
+		<Item Name="Example" Type="Folder">
+			<Item Name="Database Example.vi" Type="VI" URL="../Example/Database Example.vi"/>
+		</Item>
 		<Item Name="TSC Event Logger (SQL).lvlib" Type="Library" URL="../TSC Event Logger (SQL).lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -38,6 +44,7 @@
 				<Item Name="PathToUNIXPathString.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFURL.llb/PathToUNIXPathString.vi"/>
 				<Item Name="Recursive File List.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Recursive File List.vi"/>
 				<Item Name="SQLite.lvlib" Type="Library" URL="/&lt;vilib&gt;/drjdpowell/SQLite Library/SQLite.lvlib"/>
+				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="TSC Event Logger.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_TSC/TSC Event Logger/TSC Event Logger.lvlib"/>
 				<Item Name="UNIXPathStringToPath.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/CFURL.llb/UNIXPathStringToPath.vi"/>
