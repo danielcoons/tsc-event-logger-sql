@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Todo
 
+## [1.0.1] - 2026.05.15
+### Fixed
+- Added fix for [#1](https://github.com/danielcoons/tsc-event-logger-sql/issues/1); library was hardcoded to save as 2019 source
+
 ## [1.0.0] - 2025.11.21
 ### Changed
 - Released the tool as a public, open-source project
